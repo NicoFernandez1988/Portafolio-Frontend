@@ -1,0 +1,26 @@
+<div class="row">
+    <section class="py-0 bg-dark bg-gradient" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 experiencia" style="color:antiquewhite;">
+                    <h1 class="mt-2 mb-4" >Experiencia: <h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevaexp" *ngIf="isLogged"></i></h3> </h1>
+                        
+                        <ul *ngFor="let Experiencia of expe">
+                            <li >
+                                <div class="myDiv">
+                                    <h2>Empresa: {{Experiencia.nombreE}}</h2>  
+                                    <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarexp/{{Experiencia.id}}" *ngIf="isLogged"></i></h6>
+                                    <h6><i class="fa fa-lg fa-trash ms-3 mt-3" (click)="delete(Experiencia.id)" *ngIf="isLogged"></i></h6>
+                                </div>
+                                
+                            </li>
+                            <p>
+                               Tareas realizadas: {{Experiencia.descripcionE}}
+                            </p>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

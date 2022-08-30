@@ -1,0 +1,75 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class=" pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Cargar datos de la nueva persona</h2>
+  
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  
+  
+                    <div class="form-outline form-white mb-4">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" [(ngModel)]="nombre" equired />
+                      </div>
+      
+                      <div class="form-outline form-white mb-4">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" class="form-control form-control-lg" [(ngModel)]="apellido" required />
+                      </div>
+
+                      <div class="form-outline form-white mb-4">
+                        <label for="imagen">Imagen</label>
+                        <input type="text" id="imagen" name="imagen" class="form-control form-control-lg" [(ngModel)]="imagen" required />
+                      </div>
+      
+                      <div class="form-outline form-white mb-4">
+                        <label for="titulo">Titulo</label>
+                        <input type="text" id="titulo" name="titulo" class="form-control form-control-lg" [(ngModel)]="titulo" required />
+                      </div>
+    
+                      <div class="form-outline form-white mb-4">
+                        <label for="provincia">Provincia</label>
+                        <input type="text" id="provincia" name="provincia" class="form-control form-control-lg" [(ngModel)]="provincia" required />
+                      </div>
+      
+                      <div class="form-outline form-white mb-4">
+                        <label for="pais">Pais</label>
+                        <input type="text" id="pais" name="pais" class="form-control form-control-lg" [(ngModel)]="pais" required />
+                      </div>
+    
+                      <div class="form-outline form-white mb-4">
+                        <label for="telefono">Numero de telefono</label>
+                        <input type="text" id="telefono" name="telefono" class="form-control form-control-lg" [(ngModel)]="telefono" required />
+                      </div>
+      
+                      <div class="form-outline form-white mb-4">
+                        <label for="correo">Correo electronico</label>
+                        <input type="text" id="correo" name="correo" class="form-control form-control-lg" [(ngModel)]="correo" required />
+                      </div>
+    
+                      <div class="form-outline form-white mb-4">
+                        <label for="descripcion">Acerca de mi</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-control form-control-lg" [(ngModel)]="descripcion" required />
+                      </div>
+  
+                  <div>
+                    <a routerLink="/home" class="btn btn-outline-light btn-lg px-3 mb-3">Volver</a>
+                    <button class="btn btn-outline-light btn-lg px-3 mb-3 ms-3" type="submit">Guardar</button>
+                  </div>
+                  
+                  
+                </form>
+                
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

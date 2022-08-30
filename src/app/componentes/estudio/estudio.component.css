@@ -1,0 +1,28 @@
+.estudio{
+    padding: 20px;
+}
+
+h1,li,ul{
+    text-align:center;
+}
+
+h2,h3{
+    display:inline;
+}
+
+section{
+    box-shadow: 0px -2px 5px darkorange;
+}
+
+.myDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+i:hover {
+    color: rgb(28, 100, 255);
+}
+
+p{
+    font-size: 18px;
+}

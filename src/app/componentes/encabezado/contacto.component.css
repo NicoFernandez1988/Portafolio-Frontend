@@ -1,0 +1,15 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(208, 191, 0), rgb(41, 41, 41));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: radial-gradient(rgb(224, 179, 0), rgb(43, 43, 43));
+    }
+
+.myDiv {
+    display: flex;
+    justify-content: center;
+}

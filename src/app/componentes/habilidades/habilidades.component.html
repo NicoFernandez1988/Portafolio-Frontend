@@ -1,0 +1,64 @@
+<div class="row">
+    <section class="py-0 bg-dark bg-gradient" >
+        <div class="container">
+            <div class="row justify-content-center habilidades">
+                <h1 class="mt-2 mb-4" >Habilidades duras: <h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevahabD" *ngIf="isLogged"></i></h3> </h1>
+                    <div *ngFor="let HabilidadDura of habiD" class="text-center col-sm-3 col-md-3 col-lg-3">
+                    
+                            <circle-progress
+                                [percent]=HabilidadDura.porcentajeD
+                                [radius]="80"
+                                [outerStrokeWidth]="8"
+                                [innerStrokeWidth]="5"
+                                [unitsColor]="'orange'"
+                                [titleColor]="'orange'"
+                                [subtitle]=HabilidadDura.habilidadD
+                                [subtitleFontSize]="'14'"
+                                [subtitleColor]="'white'"
+                                [outerStrokeGradient]="true"
+                                [outerStrokeGradientStopColor]="'yellow'"
+                                [outerStrokeColor]="'darkorange'"
+                                [innerStrokeColor]="'white'"
+                                [animation]="true"
+                                [animationDuration]="1600"
+                            ></circle-progress>
+                            <div class="myDiv"> 
+                                <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarhabD/{{HabilidadDura.id}}" *ngIf="isLogged"></i></h6>
+                                <h6><i class="fa fa-lg fa-trash ms-3 mt-3" (click)="deleteDura(HabilidadDura.id)" *ngIf="isLogged"></i></h6>
+                            </div>
+                    
+                    </div>
+
+                    <h1 class="mt-2 mb-4" >Habilidades blandas: <h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevahabB" *ngIf="isLogged"></i></h3> </h1>
+
+                    <div *ngFor="let HabilidadBlanda of habiB" class="text-center col-sm-3 col-md-3 col-lg-3">
+                    
+                        <circle-progress
+                            [percent]=HabilidadBlanda.porcentajeB
+                            [radius]="80"
+                            [outerStrokeWidth]="8"
+                            [innerStrokeWidth]="5"
+                            [unitsColor]="'orange'"
+                            [titleColor]="'orange'"
+                            [subtitle]=HabilidadBlanda.habilidadB
+                            [subtitleFontSize]="'14'"
+                            [subtitleColor]="'white'"
+                            [outerStrokeGradient]="true"
+                            [outerStrokeGradientStopColor]="'yellow'"
+                            [outerStrokeColor]="'darkorange'"
+                            [innerStrokeColor]="'white'"
+                            [animation]="true"
+                            [animationDuration]="1600"
+                        ></circle-progress>
+                        <div class="myDiv"> 
+                            <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarhabB/{{HabilidadBlanda.id}}" *ngIf="isLogged"></i></h6>
+                            <h6><i class="fa fa-lg fa-trash ms-3 mt-3" (click)="deleteBlanda(HabilidadBlanda.id)" *ngIf="isLogged"></i></h6>
+                        </div>
+                
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</div>

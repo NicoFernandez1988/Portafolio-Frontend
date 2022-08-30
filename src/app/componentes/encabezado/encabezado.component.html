@@ -1,0 +1,42 @@
+
+        <header *ngFor="let Persona of datos" style="background-image: url('https://wallpaperstock.net/wallpapers/thumbs1/47819hd.jpg')">
+            <div class="text-center info-img">
+                
+                <div class="btn-edit mb-2" >
+                    <!--<img id="fotoPerfil" class=" img-fluid rounded-circle mt-4 mb-2" src="{{Persona.imagen}}" alt="..." />-->
+                    <img id="fotoPerfil" class=" img-fluid rounded-circle mt-4 mb-2" src="../../../assets/foto alternativa.jpg" alt="..." />
+                    <!--<h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevaper" *ngIf="isLogged"></i></h3>-->
+                    <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarper/{{Persona.id}}" *ngIf="isLogged"></i></h6>
+                </div>
+                <div >
+                <h1 class="text-white fs-3 fw-bolder sombra">{{Persona.nombre}} {{Persona.apellido}}</h1>
+                <h5 class="text-white mb-1 fw-bolder sombra">{{Persona.titulo}}</h5>
+                
+                <div class="mb-4">
+                    
+                    <span class="text-white mb-0 fw-bolder sombra">{{Persona.provincia}} {{Persona.pais}}</span>
+                    
+                </div>    
+                </div>
+                <div id="info-actions">
+                    <!--<button class="btn btn-outline-primary me-2" type="button">Tengo interes en</button>-->
+                    <button class="btn btn-outline-warning me-2" type="button" routerLink="/contacto">Medios de contacto</button>
+                </div>
+            </div>
+    </header>
+   
+    
+    <section *ngFor="let Persona of datos" class="bg-warning bg-gradient" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 encabezado">
+                    <h1 class="mt-2 mb-4">Acerca de mi: </h1>
+                    
+                    <p>{{Persona.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+

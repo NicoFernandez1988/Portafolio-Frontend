@@ -1,0 +1,28 @@
+<div class="row">
+    <section class="bg-warning bg-gradient" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 proyecto" style="color:black">
+                    <h1 class="mt-2 mb-4" >Proyectos: <h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevopro" *ngIf="isLogged"></i></h3> </h1>
+                        
+                        <ul *ngFor="let Proyecto of proy">
+                            <li >
+                                <div class="myDiv">
+                                    <h2>{{Proyecto.tituloP}}</h2>   
+                                    <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarpro/{{Proyecto.id}}" *ngIf="isLogged"></i></h6>
+                                    <h6><i class="fa fa-lg fa-trash ms-3 mt-3" (click)="delete(Proyecto.id)" *ngIf="isLogged"></i></h6>
+                                    
+                                </div>
+                                <h4 class="myDiv mb-3">Tecnologias utilizadas: {{Proyecto.tecnologia}}</h4>
+                                <img class="imagen mb-3" src={{Proyecto.imagen}} alt="">  
+                            </li>
+                            <p>
+                                {{Proyecto.descripcionP}}
+                            </p>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

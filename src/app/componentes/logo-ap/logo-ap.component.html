@@ -1,0 +1,17 @@
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+        <div class="container">
+
+                    <img id="logoCurso" class="me-5" src="../../../assets/APLogo.png" alt="">
+                    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-0 mb-lg-0">
+                    <a  class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/nicolas-fernandez-politino-844618230/"><img id="logoLinked" src="../../../assets/linkedin.png" alt=""></a>
+                    <a  class="nav-link active" aria-current="page" href="https://github.com/NicoFernandez1988/Proyectos"><img id="logoGit" src="../../../assets/github.png" alt=""></a>
+                    <button type="button" class="btn btn-outline-light ms-2 mt-2" (click)="login()" *ngIf="!isLogged">Iniciar sesion de administrador</button>
+                    <button type="button" class="btn btn-outline-light ms-2 mt-2" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesion de administrador</button>
+                </ul>
+            </div>
+        </div>
+    </nav>

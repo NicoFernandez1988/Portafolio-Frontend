@@ -1,0 +1,40 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-3 h-100" *ngIf="habiD">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class=" pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Editar datos de la habilidad</h2>
+  
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+  
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="habilidadD">Tipo de habilidad dura</label>
+                    <input type="text" id="habilidadD" autocomplete="off" name="habilidadD" class="form-control form-control-lg" [(ngModel)]="habiD.habilidadD" required />
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="porcentajeD">Porcentaje de conocimiento</label>
+                    <input type="number" id="porcentajeD" autocomplete="off" name="porcentajeD" class="form-control form-control-lg" [(ngModel)]="habiD.porcentajeD" required />
+                  </div>
+  
+                  <div>
+                    <a routerLink="/home" class="btn btn-outline-light btn-lg px-3 mb-3">Volver</a>
+                    <button class="btn btn-outline-light btn-lg px-3 mb-3 ms-3" type="submit">Actualizar</button>
+                  </div>
+                  
+                  
+                </form>
+                
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

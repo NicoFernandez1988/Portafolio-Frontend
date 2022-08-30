@@ -1,0 +1,46 @@
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class=" pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Cargar datos del nuevo estudio</h2>
+  
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="nombreInsti">Nombre de la institucion</label>
+                    <input type="text" id="nombreInsti" autocomplete="off" name="nombreInsti" class="form-control form-control-lg" [(ngModel)]="nombreInsti" required />
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="nombreCerti">Titulo obtenido</label>
+                    <input type="text" id="nombreCerti" autocomplete="off" name="nombreCerti" class="form-control form-control-lg" [(ngModel)]="nombreCerti" required />
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="nombreEst">Descripcion del estudio</label>
+                    <input type="text" id="descripcionEst" autocomplete="off" name="descripcionEst" class="form-control form-control-lg" [(ngModel)]="descripcionEst" required />
+                  </div>
+  
+                  <div>
+                    <a routerLink="/home" class="btn btn-outline-light btn-lg px-3 mb-3">Volver</a>
+                    <button class="btn btn-outline-light btn-lg px-3 mb-3 ms-3" type="submit">Guardar</button>
+                  </div>
+                  
+                  
+                </form>
+                
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

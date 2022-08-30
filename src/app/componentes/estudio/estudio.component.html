@@ -1,0 +1,26 @@
+<div class="row">
+    <section class="bg-warning bg-gradient" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 estudio" style="color:black">
+                    <h1 class="mt-2 mb-4" >Educacion: <h3><i class="fa fa-lg fa-plus-circle ms-2" routerLink="/nuevoest" *ngIf="isLogged"></i></h3> </h1>
+                        
+                        <ul *ngFor="let Estudio of est">
+                            <li >
+                                <div class="myDiv">
+                                    <h2>Institucion: {{Estudio.nombreInsti}}</h2>   
+                                    <h6><i class="fa fa-lg fa-pencil ms-3 mt-3" routerLink="/editarest/{{Estudio.id}}" *ngIf="isLogged"></i></h6>
+                                    <h6><i class="fa fa-lg fa-trash ms-3 mt-3" (click)="delete(Estudio.id)" *ngIf="isLogged"></i></h6>
+                                </div>
+                                <h4>Titulo: {{Estudio.nombreCerti}}</h4>  
+                            </li>
+                            <p>
+                                {{Estudio.descripcionEst}}
+                            </p>
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
