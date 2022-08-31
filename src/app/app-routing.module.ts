@@ -17,7 +17,7 @@ import { EditarProyectoComponent } from "./componentes/proyectos/editar-proyecto
 import { NuevoProyectoComponent } from "./componentes/proyectos/nuevo-proyecto.component";
 
 const routes: Routes = [
-    {path:'home', component: HomeComponent},
+    {path:'', component: HomeComponent},
     {path:'login', component: LoginComponent},
     {path:'nuevaexp', component: NuevaExperienciaComponent},
     {path:'editarexp/:id', component: EditarExperienciaComponent},
